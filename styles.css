@@ -210,3 +210,62 @@ main {
   padding-right: 50px;
   font-size: 1, 25vw;
 }
+
+
+/* ----STEP TO BESTILLING---------------------------------------------------------------------------------- */
+#step2-body{ 
+  text-align: center; 
+  margin: 5% 35% 5% 35%;
+}
+step2-overskrift{
+  font-weight:400;
+  color: #26245E;
+}
+/* Font overskrifter styling osv. */
+
+.dage-sektion{ 
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0% 15% 0%;
+}
+.dage-cirkel{
+border-radius:50%;
+background-color:#FFECD4;
+height: 30px;
+width: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.color-change {
+  background-color: #26245E;
+  color: #FFECD4;
+}
+
+.allergier{ 
+  margin: 5% 20% 0% 20%;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+}
+.allergier div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-cirkel{ 
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-cirkel i{ 
+  display: none;
+}
+
+.check-show{ 
+display: block;
+}
