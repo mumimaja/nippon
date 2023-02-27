@@ -1,0 +1,13 @@
+/* Import fonts */
+@import url("https://use.typekit.net/mlc3rxe.css");
+
+/* Remove margin and padding from whole document */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles for the body element */
+body {
+  font-family: josefin-sans, sans-serif;
+}
