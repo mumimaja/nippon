@@ -124,3 +124,58 @@ main {
   left: 0;
   right: 0;
 }
+
+
+
+/* Setp 1 - Kort med valg af måltidskasse */
+.choose {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.choose div {
+  background-color: #FFECD4;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: 40pt;
+  margin-bottom: 40pt;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.choose h2 {
+  text-transform: uppercase;
+  padding-bottom: 15pt;
+  
+}
+
+.choose h2, .choose p {
+  text-align: center;
+}
+
+.choose_img_com {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+
+.from {
+  margin-top: 80pt; /* tilføj over knappen i stedet for */
+}
+
+#button-choose {
+    display: flex;
+    justify-content: center;
+}
+
+#button-choose a{
+    text-decoration: none;
+    color: white;
+    background-color: #26245E; 
+    border-radius: 25px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1,25vw;
+}
