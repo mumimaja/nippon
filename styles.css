@@ -9,59 +9,118 @@
 
 /* General styles for the body element */
 body {
+  position: relative;
   font-family: josefin-sans, sans-serif;
 }
 
-
-/* Setp 1 - Kort med valg af måltidskasse */
-.choose {
+/* Header styling */
+header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-between;
+  align-items: end;
+  background-color: #ffecd4;
+  height: 12vh;
+  max-height: 12vh;
 }
 
-.choose div {
-  background-color: #FFECD4;
-  border-radius: 20px 20px 0px 0px;
-  margin-top: 40pt;
-  margin-bottom: 40pt;
-  border-radius: 20px 20px 20px 20px;
+header img {
+  width: 200px;
+  padding: 30px;
 }
 
-.choose h2 {
+nav {
+  padding: 30px;
+}
+
+/* Nav link styling */
+nav a {
+  color: #26245e;
+  text-decoration: none;
   text-transform: uppercase;
-  padding-bottom: 15pt;
-  
+  font-size: 1.15vw;
+  font-weight: 400;
+  padding: 15px;
 }
 
-.choose h2, .choose p {
+/* User icon styling */
+#user {
+  background-color: #26245e;
+  color: #ffecd4;
+  border-radius: 50%;
+  padding: 0.6vw;
+}
+
+.fa-user {
+  font-size: 1.2vw;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #ffecd4;
+  box-shadow: 0px 5px 5px #0000001e;
+  border-radius: 0px 0px 5px 5px;
+  padding-top: 10px;
+  width: 240px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 15px 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* HERO IMAGE */
+#hero {
+  position: relative;
+  height: 88vh;
+  background-size: cover;
+  background-image: url(images/hero.jpg);
+}
+#hero h1 {
+  margin-left: 7%;
+  padding-top: 150px;
+  align-self: center;
+  color: #26245e;
+  font-size: 7vw;
+}
+#hero a {
   text-align: center;
+  /*   
+  background-color: #ffecd4;
+  color: #26245e;
+  text-decoration: none;
+  padding: 20px 30px;
+  font-size: 1.75vw;
+  font-weight: 600;
+  border-radius: 43px; */
 }
 
-.choose_img_com {
-  border-radius: 20px 20px 0px 0px;
-  width: 100%;
+/* MAIN CONTENT */
+main {
+  position: relative;
 }
 
-.from {
-  margin-top: 80pt; /* tilføj over knappen i stedet for */
-}
-
-#button-choose {
-    display: flex;
-    justify-content: center;
-}
-
-#button-choose a{
-    text-decoration: none;
-    color: white;
-    background-color: #26245E; 
-    border-radius: 25px;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 1,25vw;
+#infographic {
+  width: 70%;
+  position: relative;
+  left: 0;
+  right: 0;
 }
