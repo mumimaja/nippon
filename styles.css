@@ -23,8 +23,9 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   background-color: #ffecd4;
-  height: 12vh;
+  min-height: 12vh;
   padding: 1.5%;
+  transition: 0.2s;
 }
 
 #logo {
@@ -87,7 +88,7 @@ nav a {
 #hero {
   display: flex;
   flex-direction: column;
-  position: relative;
+  gap: 15%;
   height: 88vh;
   background-size: cover;
   background-image: url(images/hero.jpg);
@@ -130,32 +131,94 @@ main {
 #teaser {
   display: flex;
   color: #26245e;
+  min-height: 50vh;
 }
 #teaser div:first-child {
   background-color: #fcedd7;
-  height: 500px;
   width: 30%;
 }
 #teaser div:last-child {
   background-color: #fff7ea;
-  height: 500px;
   width: 70%;
+}
+#teaser img {
+  width: 65%;
+  position: relative;
+  left: 66%;
+  top: 12%;
 }
 
 #text {
-  background-color: none;
+  text-align: right;
   margin-left: 20%;
 }
-
 #text h2 {
   font-size: 2.75vw;
-  text-align: right;
+  margin-top: 10%;
 }
 #text p {
-  text-align: right;
-  margin-top: 10px;
+  margin-top: 5%;
   font-size: 1.7vw;
   line-height: 110%;
+  margin-left: 15%;
+  padding-bottom: 10%;
+}
+#text a {
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: #26245e;
+  background-color: #fcedd7;
+  padding: 3% 5%;
+  font-size: 1.5vw;
+  border-radius: 40px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 35vh;
+  background-color: #26245e;
+  color: white;
+}
+footer div {
+  height: 10vh;
+}
+footer div h3 {
+  font-size: 1.5vw;
+  padding-bottom: 10%;
+}
+#contact ul {
+  list-style: none;
+}
+#contact a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+#contact li {
+  padding-bottom: 5%;
+  font-size: 1.3vw;
+}
+#address p {
+  font-weight: 300;
+  font-size: 1.3vw;
+}
+
+#socials a {
+  color: white;
+  font-size: 1.2vw;
+  text-decoration: underline;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#socials i {
+  padding-right: 10%;
+  font-size: 2vw;
 }
 
 /* Setp 1 - Kort med valg af måltidskasse */
@@ -208,51 +271,50 @@ main {
   padding: 15px;
   padding-left: 50px;
   padding-right: 50px;
-  font-size: 1, 25vw;
+  font-size: 1.25vw;
 }
-
 
 /* ----STEP TO BESTILLING---------------------------------------------------------------------------------- */
-#step2-body{ 
-  text-align: center; 
+#step2-body {
+  text-align: center;
   margin: 5% 35% 5% 35%;
 }
-step2-overskrift{
-  font-weight:400;
-  color: #26245E;
+.step2-overskrift {
+  font-weight: 400;
+  color: #26245e;
 }
 /* Font overskrifter styling osv. */
 
-.dage-sektion{ 
+.dage-sektion {
   display: flex;
   justify-content: space-between;
   margin: 5% 0% 15% 0%;
 }
-.dage-cirkel{
-border-radius:50%;
-background-color:#FFECD4;
-height: 30px;
-width: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
+.dage-cirkel {
+  border-radius: 50%;
+  background-color: #ffecd4;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .color-change {
-  background-color: #26245E;
-  color: #FFECD4;
+  background-color: #26245e;
+  color: #ffecd4;
 }
 
-.allergier{ 
+.allergier {
   margin: 5% 20% 0% 20%;
   /* margin-left: 20%;
   margin-right: 20%; */
 }
-.allergier div{
+.allergier div {
   display: flex;
   justify-content: space-between;
 }
 
-.check-cirkel{ 
+.check-cirkel {
   border-radius: 50%;
   border: 1px solid black;
   height: 20px;
@@ -262,10 +324,10 @@ align-items: center;
   align-items: center;
 }
 
-.check-cirkel i{ 
+.check-cirkel i {
   display: none;
 }
 
-.check-show{ 
-display: block;
+.check-show {
+  display: block;
 }
