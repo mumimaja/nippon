@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Profil</title>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
+
+    <section id="profilside">
+      <ul id="profilmenu">
+        <li>
+          <img src="images/pandaprofil.jpg" alt="pandaprofil" />
+        </li>
+        <li>
+          <a href="#">Profil</a>
+        </li>
+        <li>
+          <a href="#">Betalingsoplysninger</a>
+        </li>
+        <li>
+          <a href="#">Bestillingshistorik</a>
+        </li>
+        <li id="logud"></li>
+        <li>
+          <a href="#">Log ud</a>
+        </li>
+      </ul>
+
+      <div id="oplysninger">
+        <div class="overskriftprofil">
+          <h1>Profil</h1>
+        </div>
+
+        <table id="tabel">
+          <tr>
+            <td>Brugernavn</td>
+            <td class="venstre">eksempel</td>
+          </tr>
+          <tr>
+            <td>Mail-adresse</td>
+            <td class="venstre">eksempel</td>
+          </tr>
+          <tr>
+            <td>Telefon-nr.</td>
+            <td class="venstre">eksempel</td>
+          </tr>
+        </table>
+
+        <div id="retoplysninger">
+          <a href="#">Ret oplysninger</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="contact">
+        <h3>Kontakt-Info</h3>
+        <ul>
+          <li>Mail: <a href="mailto:nippon@email.com">kontakt@nippon.dk</a></li>
+          <li>Telefon: <a href="tel:+4540302010">+45 40 30 20 10</a></li>
+        </ul>
+      </div>
+      <div id="address">
+        <h3>Adresse</h3>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
+          Ringvej Syd 104 <br />
+          8260 Viby J
+        </a>
+      </div>
+      <div id="socials">
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
+        <div>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

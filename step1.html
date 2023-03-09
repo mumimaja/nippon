@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <script src="order.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nippon - Bestilling (trin 1)</title>
+    <style>
+      .circle-and-text:nth-child(1) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar">
+      <div class="circle-and-text" id="first-step">
+        <div class="circle">1</div>
+        <p>Vælg kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">2</div>
+        <p>Tilpas kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">3</div>
+        <p>Dine retter</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">4</div>
+        <p>Oplysninger</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">5</div>
+        <p>Betaling</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">6</div>
+        <p>Bekræftelse</p>
+      </div>
+    </div>
+
+    <!-- MOBILE PROGRESS BAR -->
+
+    <div id="mobile-progress-container">
+      <div id="progress-bar-mobile">
+        <p>Vælg kasse</p>
+        <div class="circle-mobile">1</div>
+      </div>
+      <div class="line-mobile"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <!-- Card container -->
+    <div class="card-container">
+      <!-- card -->
+      <div class="card">
+        <img src="images/den-billige.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Den billige</h2>
+          <p>Vores billigste løsning</p>
+          <div class="bottom-content">
+            <p>fra 300kr.</p>
+            <a href="step2.html" data-value="Den billige">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/ny-i-japan.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Ny i japan</h2>
+          <p>Til dig som ønsker en bid af Japan</p>
+          <div class="bottom-content">
+            <p>fra 350kr.</p>
+            <a href="step2.html" data-value="Ny i Japan">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/luksus.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Premium</h2>
+          <p>Til dig som ønsker at prøve den luksuriøse del af Japan</p>
+          <div class="bottom-content">
+            <p>fra 500kr.</p>
+            <a href="step2.html" data-value="Premium">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/uden-fisk.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Uden fisk</h2>
+          <p>Kassen fri for fisk</p>
+          <div class="bottom-content">
+            <p>fra 330kr.</p>
+            <a href="step2.html" data-value="Uden fisk">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/vegetar.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Vegetar</h2>
+          <p>Spækket med kødfriretter</p>
+          <div class="bottom-content">
+            <p>fra 370kr.</p>
+            <a href="step2.html" data-value="Vegetar">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/familie.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Familien</h2>
+          <p>Smag for hele familien</p>
+          <div class="bottom-content">
+            <p>fra 400kr.</p>
+            <a href="step2.html" data-value="Familien">Vælg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+        <img src="images/bland-selv.jpg" alt="billede af måltidskasse" />
+        <div class="card-content">
+          <h2>Bland selv</h2>
+          <p>Sammensæt din egen kasse ud fra vores store udvalg af retter</p>
+          <div class="bottom-content">
+            <a href="step2.html" data-value="Bland selv">Vælg</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="contact">
+        <h3>Kontakt-Info</h3>
+        <ul>
+          <li>Mail: <a href="mailto:nippon@email.com">kontakt@nippon.dk</a></li>
+          <li>Telefon: <a href="tel:+4540302010">+45 40 30 20 10</a></li>
+        </ul>
+      </div>
+      <div id="address">
+        <h3>Adresse</h3>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
+          Ringvej Syd 104 <br />
+          8260 Viby J
+        </a>
+      </div>
+      <div id="socials">
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
+        <div>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

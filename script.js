@@ -12,24 +12,28 @@ dageCirkel.forEach((element) => {
   });
 });
 
-const checkCirkel = document.querySelectorAll("check-cirkel");
-const checkPil = document.querySelectorAll(".fa-solid fa-check");
+//Her laver vi funktionen så man kan tjekke laktose af som allergi.
+//Dette er som sagt et eksempel som kun virker på id'et check-cirkel-forsøg ( laktose ), da vi havde problemer med at refere til alle classes.
 
-checkCirkel.forEach((element) => {
-  element.addEventListener("click", () => {
-    element.classList.toggle("check-show");
-  });
+if (document.title === "Nippon - Bestilling (trin 2)") {
+  const checkCirkel = document.getElementById("check-cirkel-forsøg");
+
+  checkCirkel.addEventListener("click", flueben);
+
+  function flueben() {
+    //Her indsætter vi ikonet fra font awsome med innerHTML
+    checkCirkel.innerHTML = '<i class="fa-solid fa-check"></i>';
+  }
+}
+
+const burger = document.querySelector(".fa-bars");
+const overlay = document.querySelector(".menu");
+const x = document.querySelector(".fa-x");
+
+burger.addEventListener("click", () => {
+  overlay.style.height = "100%";
 });
 
-// Hide header on scroll
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-//   var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.querySelector("header").style.top = "0";
-//   } else {
-//     document.querySelector("header").style.top = "-150px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
+x.addEventListener("click", () => {
+  overlay.style.height = "0";
+});

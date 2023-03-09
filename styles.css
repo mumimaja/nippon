@@ -14,6 +14,53 @@ body {
   font-family: josefin-sans, sans-serif;
 }
 
+/* BURGER MENU */
+
+/* Menu overlay */
+.menu {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: #fcedd7;
+  overflow-x: hidden;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.menu-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.menu a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #26245e;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #26245e;
+}
+
+.menu .closebtn {
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  font-size: 18pt;
+  color: #26245e;
+}
+
 /* Header styling */
 header {
   z-index: 1;
@@ -23,13 +70,12 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   background-color: #ffecd4;
-  min-height: 12vh;
-  padding: 1.5%;
-  transition: 0.2s;
+  height: 90px;
+  padding: 15px;
 }
 
 #logo {
-  width: 50%;
+  width: 120px;
 }
 
 /* Nav link styling */
@@ -37,21 +83,31 @@ nav a {
   color: #26245e;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.15vw;
+  font-size: 10pt;
   font-weight: 400;
-  padding: 15px;
+  margin: 13px;
+  padding: 2px;
+}
+
+nav a:hover:not(#logo, #user) {
+  border-bottom: 2px solid #26245e;
 }
 
 /* User icon styling */
-#user {
+.fa-user {
+  font-size: 12pt;
   background-color: #26245e;
   color: #ffecd4;
   border-radius: 50%;
-  padding: 0.6vw;
+  padding: 10px;
 }
 
-.fa-user {
-  font-size: 1.2vw;
+.fa-bars {
+  color: #26245e;
+  display: none;
+  cursor: pointer;
+  font-size: 18pt;
+  padding: 5%;
 }
 
 /* Dropdown */
@@ -66,7 +122,6 @@ nav a {
   top: 20px;
   left: 0;
   background-color: #ffecd4;
-  box-shadow: 0px 5px 5px #0000001e;
   border-radius: 0px 0px 5px 5px;
   padding-top: 10px;
   width: 240px;
@@ -77,7 +132,6 @@ nav a {
   display: block;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 15px 20px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -107,8 +161,8 @@ nav a {
   background-color: #ffecd4;
   color: #26245e;
   text-decoration: none;
-  padding: 20px 30px;
-  font-size: 1.75vw;
+  padding: 15px 30px;
+  font-size: 2vw;
   font-weight: 600;
   border-radius: 43px;
   display: block;
@@ -121,14 +175,15 @@ main {
 }
 
 #infographic {
-  width: 70%;
+  width: 60%;
   display: block;
   margin: auto;
-  padding: 5%;
+  padding: 30px;
 }
 
 /* Section with teaser for the about japan site */
 #teaser {
+  overflow: hidden;
   display: flex;
   color: #26245e;
   min-height: 50vh;
@@ -154,7 +209,7 @@ main {
 }
 #text h2 {
   font-size: 2.75vw;
-  margin-top: 10%;
+  margin-top: 9%;
 }
 #text p {
   margin-top: 5%;
@@ -174,123 +229,320 @@ main {
   border-radius: 40px;
 }
 
-/* FOOTER */
+/* STEP1 & DINE RETTER */
 
-footer {
+/* Step 1 - Kort med valg af måltidskasse */
+
+.card-container {
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 50px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 35vh;
-  background-color: #26245e;
-  color: white;
-}
-footer div {
-  height: 10vh;
-}
-footer div h3 {
-  font-size: 1.5vw;
-  padding-bottom: 10%;
-}
-#contact ul {
-  list-style: none;
-}
-#contact a {
-  text-decoration: none;
-  color: white;
-  font-weight: 300;
-}
-#contact li {
-  padding-bottom: 5%;
-  font-size: 1.3vw;
-}
-#address p {
-  font-weight: 300;
-  font-size: 1.3vw;
-}
-
-#socials a {
-  color: white;
-  font-size: 1.2vw;
-  text-decoration: underline;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-#socials i {
-  padding-right: 10%;
-  font-size: 2vw;
-}
-
-/* Setp 1 - Kort med valg af måltidskasse */
-.choose {
-  display: flex;
+  flex-direction: row;
+  gap: 50px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 50px;
 }
-
-.choose div {
-  background-color: #ffecd4;
+.card {
+  margin: auto;
+  width: 300px;
+  transition: 0.2s;
+}
+.card img {
+  position: relative;
+  top: 10px;
+  width: 300px;
   border-radius: 20px 20px 0px 0px;
-  margin-top: 40pt;
-  margin-bottom: 40pt;
-  border-radius: 20px 20px 20px 20px;
 }
-
-.choose h2 {
-  text-transform: uppercase;
-  padding-bottom: 15pt;
+.card-content {
+  position: relative;
+  height: 250px;
+  background-color: #ffecd4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
 }
-
-.choose h2,
-.choose p {
+.card-content h2 {
+  color: #26245e;
+  margin-top: 20px;
+}
+.card-content p {
+  font-size: 12pt;
+  line-height: 30px;
+  margin-top: 30px;
+  width: 85%;
   text-align: center;
 }
-
-.choose_img_com {
-  border-radius: 20px 20px 0px 0px;
-  width: 100%;
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
 }
-
-.from {
-  margin-top: 80pt; /* tilføj over knappen i stedet for */
-}
-
-#button-choose {
+.bottom-content a {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #26245e;
+  color: white;
+  transition: 0.3s;
+}
+.bottom-content a:hover {
+  width: 160px;
 }
 
-#button-choose a {
+/* Informations tekst på Dine retter */
+.information {
+  position: absolute;
+  bottom: 80px;
+  left: 19%;
+  width: 60%;
+}
+
+/* Styling af knapperne */
+.cards div a {
+  position: absolute;
+  bottom: 30px;
+  left: 140px;
+
   text-decoration: none;
   color: white;
   background-color: #26245e;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 15px;
   padding-left: 50px;
   padding-right: 50px;
   font-size: 1.25vw;
+  text-transform: uppercase;
+}
+
+#step3-title {
+  text-align: center;
+  margin-top: 50px;
+  color: #26245e;
+}
+#step3-title h2 {
+  font-size: 25px;
+}
+
+/* ------- MÅLTIDSKASSE BEREGNER SIDE ------- */
+
+#calculator {
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+  text-align: center;
+  margin-top: 50px;
+}
+#calc-text h1 {
+  color: #26245e;
+  font-size: 2.5vw;
+  margin-bottom: 10px;
+}
+#calc-text p {
+  width: 25%;
+  font-size: 1vw;
+  line-height: 25px;
+  margin: auto;
+}
+#calc-form {
+  display: flex;
+  flex-direction: column;
+}
+#calc-form label {
+  position: relative;
+  right: 45px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#calc-form input {
+  margin: auto;
+  align-items: center;
+  height: 20px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+#submit-calc {
+  cursor: pointer;
+  background-color: #ffecd4;
+  border: none;
+  color: #26245e;
+  border-radius: 5px;
+}
+
+#dishCardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.dishCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #ffecd4;
+  margin-top: 40pt;
+  /* margin-bottom: 20pt; burges på kortene på dine retter */
+  border-radius: 20px 20px 20px 20px;
+  width: 300px;
+  height: 430px;
+  position: relative;
+}
+
+.dishCard h3 {
+  cursor: pointer;
+  background-color: #26245e;
+  color: white;
+  padding: 10px 30px;
+  width: fit-content;
+  text-align: center;
+  align-self: center;
+  border-radius: 20px;
+}
+
+.dishCard p {
+  width: 80%;
+  align-self: center;
+}
+
+#afterDishes {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+#afterDishes h5 {
+  cursor: pointer;
+  background-color: #fcedd7;
+  color: #26245e;
+  padding: 15px 20px;
+  margin: auto;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+#totalPrice {
+  padding-top: 50px;
+}
+
+/* PROGRESS BAR STYLING */
+
+#progress-bar {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background-color: #ffecd4;
+  color: #26245e;
+  border-radius: 50%;
+  font-weight: 500;
+}
+.line {
+  position: relative;
+  top: 12px;
+  background-color: #ffecd4;
+  justify-content: center;
+  height: 4px;
+  width: 5%;
+}
+
+.circle-and-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle-and-text p {
+  position: absolute;
+  top: 180px;
+  font-size: 1vw;
+  align-self: center;
+}
+
+/* PROGRESS BAR MOBILE */
+
+#mobile-progress-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  display: none;
+}
+
+#progress-bar-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#progress-bar-mobile p {
+  position: absolute;
+  top: 120px;
+}
+
+.line-mobile {
+  width: 47%;
+  height: 5px;
+  background-color: #ffecd4;
+}
+
+.circle-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background-color: #26245e;
+  color: #ffecd4;
+  border-radius: 50%;
+  font-weight: 500;
 }
 
 /* ----STEP TO BESTILLING---------------------------------------------------------------------------------- */
 #step2-body {
   text-align: center;
-  margin: 5% 35% 5% 35%;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
 }
+
+#step2-body p {
+  font-size: 1vw;
+}
+
 .step2-overskrift {
   font-weight: 400;
   color: #26245e;
 }
-/* Font overskrifter styling osv. */
 
 .dage-sektion {
+  width: 65%;
   display: flex;
   justify-content: space-between;
-  margin: 5% 0% 15% 0%;
+  padding: 50px;
+  margin: auto;
 }
 .dage-cirkel {
+  cursor: pointer;
   border-radius: 50%;
   background-color: #ffecd4;
   height: 30px;
@@ -301,17 +553,30 @@ footer div h3 {
 }
 .color-change {
   background-color: #26245e;
-  color: #ffecd4;
+  color: white;
 }
 
 .allergier {
   margin: 5% 20% 0% 20%;
-  /* margin-left: 20%;
-  margin-right: 20%; */
 }
+
 .allergier div {
   display: flex;
   justify-content: space-between;
+  margin: 1% 0% 1% 0%;
+  align-items: center;
+}
+
+/* Vores forsøg ved laktose tjek knappen skal styles seperat, da hvis den både får class og ID, forvirrer det java funktionen. */
+
+#check-cirkel-forsøg {
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .check-cirkel {
@@ -324,10 +589,1148 @@ footer div h3 {
   align-items: center;
 }
 
-.check-cirkel i {
+#knapper-section {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.knap {
+  border-radius: 20px;
+  background-color: #ffecd4;
+  display: flex;
+  justify-content: space-between;
+  color: #26245e;
+  text-decoration: none;
+  width: 30%;
+  padding: 2% 4% 2% 4%;
+  font-size: 1vw;
+  align-items: center;
+}
+
+#last-step {
+  font-weight: 900;
+}
+
+/* STEP 4 */
+
+/* General styles for the body element */
+#step4-body {
+  font-family: josefin-sans, sans-serif;
+  align-items: center;
+  text-align: center;
+  margin: 5% 30% 5% 30%;
+}
+
+#step4-body h2 {
+  font-weight: 400;
+  color: #26245e;
+  font-size: 1.75vw;
+  margin: 5% 0% 5% 0%;
+}
+
+.oplysninger input[type="text"] {
+  border: 1px solid #6f6f6f;
+  border-radius: 15px;
+
+  padding: 2%;
+  margin: 1% 0% 1% 0%;
+
+  font-size: 1vw;
+  font-family: josefin-sans, sans-serif;
+  color: #6f6f6f;
+}
+
+/* STEP 5 */
+
+/* General styles for the body element */
+#step5-body {
+  font-family: josefin-sans, sans-serif;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 180px;
+}
+
+#step5-flex {
+  justify-content: space-between;
+  display: flex;
+}
+#step5-body p {
+  font-size: 1vw;
+}
+
+#step5-body h2 {
+  font-weight: 400;
+  font-size: 1.75vw;
+  color: #26245e;
+  padding-bottom: 5%;
+}
+
+#step5-flex section {
+  width: 50%;
+}
+
+.betalingsoplysninger {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #6f6f6f;
+  border-radius: 15px;
+  margin: 1% 0% 1% 0%;
+  padding: 2%;
+  align-items: center;
+}
+
+.betalingsoplysninger input[type="text"] {
+  border: none;
+  font-family: josefin-sans, sans-serif;
+  font-weight: 1vw;
+  color: #6f6f6f;
+}
+
+/* STEP 6 */
+
+#step6-body {
+  font-family: josefin-sans, sans-serif;
+  margin: 5% 20% 5% 20%;
+  text-align: center;
+}
+
+#step6-body h1 {
+  font-weight: 400;
+  font-size: 2.75vw;
+  color: #26245e;
+  padding: 5% 0% 5% 0%;
+}
+
+#step6-body a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#step6-body img {
+  width: 30%;
+}
+
+/*----------STYLING AF DET JAPANSKE KØKKEN------------------*/
+
+/*Billede*/
+#billede {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#billede img {
+  border-radius: 0px 0px 20px 20px;
+  width: 90%;
+  height: auto;
+}
+
+/*Margin*/
+
+#overskrift {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#overskrift h1 {
+  font-size: 2.75vw;
+  font-weight: 700;
+  color: #26245e;
+}
+
+#indledning {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#indledning h2 {
+  font-size: 1.75vw;
+  font-weight: 400;
+  color: #26245e;
+}
+
+#indledning h3 {
+  font-size: 1vw;
+  font-weight: 700;
+  color: #26245e;
+}
+
+#brødtekst {
+  margin: auto;
+  width: 80%;
+  font-size: 1vw;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+#brødtekst h3 {
+  font-size: 1.25vw;
+  font-weight: 700;
+  color: #26245e;
+}
+
+/* ------------STYLING AF 404-SIDE---------------*/
+
+#tekniskfejl h1 {
+  font-size: 2.75vw;
+  color: #26245e;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#tekniskfejl h2 {
+  font-size: 2.75vw;
+  color: #26245e;
+  text-align: center;
+}
+
+#panda {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#panda img {
+  height: auto;
+  width: 20%;
+}
+
+#tilbagetilforsiden {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+#tilbagetilforsiden a {
+  text-decoration: none;
+  color: black;
+  background-color: #ffecd4;
+  border-radius: 25px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.25vw;
+}
+
+/*----------------------Profilside -------------*/
+
+#profilside {
+  display: flex;
+}
+
+#oplysninger {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 15px;
+}
+
+#profilmenu li {
+  border: 1px solid black;
+  border-collapse: collapse;
+  list-style-type: none;
+  width: 80%;
+}
+
+#logud {
+  padding-top: 350px;
+}
+
+#profilmenu img {
+  width: 100%;
+  height: auto;
+}
+
+#profilmenu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25vw;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 1.25vw;
+  width: 300px;
+}
+
+table {
+  width: 100%;
+}
+
+.overskriftprofil {
+  font-size: 1.75vw;
+  color: black;
+}
+
+#retoplysninger {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+#retoplysninger a {
+  text-decoration: none;
+  color: black;
+  background-color: #ffecd4;
+  border-radius: 25px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.25vw;
+}
+
+/* CONCEPT PAGE */
+
+#concept-container {
+  overflow-x: hidden;
+  margin-top: 50px;
+}
+
+/* All texts and titles */
+.head-titles {
+  font-size: 2vw;
+  text-align: center;
+  color: #26245e;
+}
+
+#koncept-side-intro-1 {
+  font-size: 1.75vw;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  font-weight: 800;
+}
+
+#koncept-side-intro-2 {
+  font-size: 1.75vw;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+/* Making the picture infographic-threesteps centered*/
+.infographic-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Font Awesome arrow */
+.fa-arrow-down {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Video / animatic */
+video {
+  display: block;
+  margin: auto;
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+/* Koncept-cards */
+.koncept-cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  grid-gap: 7%;
+}
+
+.koncept-cards-div {
+  width: 40%;
+  margin-top: 3%;
+}
+
+.koncept-cards-div h4 {
+  text-align: center;
+  margin-bottom: 3%;
+  font-weight: 400;
+}
+
+.koncept-cards-div img {
+  border-radius: 20px;
+  width: 100%;
+  /* margin-left: auto; 
+  margin-right: auto;*/
+}
+
+.koncept-cards-div h4 {
+  text-align: left;
+  font-size: 1.5vw;
+  color: #26245e;
+  font-weight: 800;
+}
+
+.koncept-cards-div p {
+  text-align: left;
+  font-size: 1.5vw;
+}
+
+/* Knapper på flexbokse */
+#button-koncept-cards {
+  display: flex;
+  justify-content: left;
+  margin-top: 10%;
+}
+
+#button-koncept-cards a {
+  text-decoration: none;
+  color: #26245e;
+  background-color: #ffecd4;
+  border-radius: 25px;
+  padding: 12px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.5vw;
+}
+
+/* Linje med bæredygtighed som overskrift */
+.koncept-big-text {
+  font-size: 3vw;
+  text-align: center;
+  color: #26245e;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+.koncept-overskrift-baredygtighed {
+  justify-content: left;
+  margin-left: 10%;
+}
+
+.flex-koncept-baredygtighed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.flex-koncept-baredygtighed > div {
+  text-align: center;
+  line-height: 75px;
+  font-size: 1.2vw;
+  width: 22%;
+}
+
+.fa-fish,
+.fa-truck,
+.fa-box-open,
+.fa-certificate {
+  color: #26245e;
+  font-size: 5vw;
+}
+
+.koncept-cards-baredygtighed {
+  display: flex;
+  width: 85%;
+  grid-gap: 7%;
+}
+
+.koncept-baredygtighed-div {
+  width: 80%;
+  margin-left: 8.5%;
+  margin-right: auto;
+  font-size: 1.2vw;
+}
+
+.koncept-baredygtighed-div h2 {
+  font-size: 1.5vw;
+  color: #26245e;
+  font-weight: 800;
+  margin-bottom: 3%;
+}
+
+.koncept-baredygtighed-div p {
+  font-size: 1.5vw;
+  margin-bottom: 6%;
+}
+
+/* Opskrift siden  */
+
+.opskrift {
+  margin-top: 5%;
+}
+
+#mobil-top-tekst {
   display: none;
 }
 
-.check-show {
-  display: block;
+.box1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+.box1 p {
+  padding-bottom: 30px;
+}
+
+.box1 h2 {
+  padding-bottom: 3%;
+  color: #26245e;
+  font-size: 2.5vw; /*  ændre i forhold til christoffers css?? ikke responsive */
+}
+
+.box1 h3 {
+  padding-bottom: 2%;
+  color: #26245e;
+  font-size: 1.5vw; /*  ændre i forhold til christoffers css?? ikke responsive */
+}
+
+.box2 {
+  margin: auto;
+  width: 30%;
+}
+
+.box2 img {
+  margin-top: 22%;
+  margin-bottom: 10%;
+}
+
+.opskrift {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.næringsstoffer-opskrift {
+  margin-bottom: 10%;
+}
+
+.næringsinformation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted #26245e;
+  background-color: #fcedd7;
+  padding: 1%;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+  background-color: #26245e;
+  color: white;
+}
+footer div h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-bottom: 10%;
+}
+#contact ul {
+  list-style: none;
+}
+#contact a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+#contact li {
+  padding-bottom: 5%;
+  font-size: 20px;
+}
+#address a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+}
+#socials div {
+  height: fit-content;
+}
+
+#socials a {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#socials i {
+  padding-right: 10%;
+  font-size: 30px;
+}
+
+/* ORDER OUTPUT (JavaScript) */
+
+#customer-information {
+  list-style: none;
+}
+#customer-information li {
+  font-size: 0.8vw;
+  padding-bottom: 5px;
+}
+
+/* BREAKPOINT V. 1024 PX */
+
+@media screen and (max-width: 1024px) {
+  /* HEADER */
+  header {
+    align-items: center;
+    padding: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+  }
+
+  /* HERO SECTION */
+  #hero {
+    height: 30vh;
+  }
+
+  #hero a {
+    font-size: 3vw;
+    padding: 10px 20px;
+  }
+
+  /* INFOGRAPHIC */
+  #infographic {
+    width: 100%;
+  }
+
+  /* TEASER SECTION */
+  #teaser {
+    min-height: 20vh;
+  }
+  #teaser img {
+    width: 100%;
+    left: 50%;
+  }
+  #text h2 {
+    font-size: 4vw;
+    margin-top: 9%;
+  }
+  #text p {
+    margin-top: 5%;
+    font-size: 2.5vw;
+    line-height: 110%;
+    margin-left: 15%;
+    padding-bottom: 10%;
+  }
+  #text a {
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #26245e;
+    background-color: #fcedd7;
+    padding: 5px 10px;
+    font-size: 2.5vw;
+    border-radius: 40px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 10%;
+  }
+  footer div h3 {
+    font-size: 4vw;
+  }
+  footer div a,
+  p {
+    font-size: 3vw;
+  }
+  #address a {
+    font-size: 3vw;
+  }
+  #contact li {
+    font-size: 3vw;
+  }
+  #contact a {
+    font-size: 3vw;
+  }
+  #socials a {
+    font-size: 4vw;
+  }
+  #socials i {
+    font-size: 4.5vw;
+  }
+
+  /* MÅLTIDSKASSE BEREGNER SIDE */
+  #calc-text h1 {
+    font-size: 5.5vw;
+  }
+  #calc-text p {
+    font-size: 3.5vw;
+    width: 80%;
+    padding-top: 20px;
+  }
+  #calc-form {
+    transform: scale(1.25);
+  }
+  .dishCard h2 {
+    font-size: 6vw;
+  }
+  .dishCard h3 {
+    font-size: 4vw;
+  }
+  .dishCard p {
+    font-size: 4vw;
+  }
+
+  /* STEP 2 */
+
+  .dage-sektion {
+    width: 100%;
+  }
+
+  .dage-cirkel {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+  #step2-body {
+    width: 100%;
+  }
+
+  #step2-body h2 {
+    font-size: 4vw;
+  }
+
+  #step2-body p {
+    font-size: 3vw;
+  }
+
+  .check-cirkel {
+    width: 30px;
+    height: 30px;
+  }
+
+  #check-cirkel-forsøg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* STEP 4 */
+
+  #step4-body {
+    width: 100%;
+    margin: auto;
+  }
+
+  .oplysninger input[type="text"] {
+    font-size: 3vw;
+  }
+
+  #step4-body h2 {
+    font-size: 4vw;
+  }
+
+  #knapper-section {
+    margin-top: 50px;
+    width: 60%;
+  }
+
+  .knap {
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .knap i {
+    font-size: 3vw;
+  }
+
+  .knap p {
+    font-size: 3vw;
+  }
+
+  /* STEP 5 */
+
+  #step5-body {
+    margin: 5% 10% 5% 10%;
+  }
+  #step5-flex {
+    flex-direction: column;
+  }
+
+  #step5-flex section {
+    width: 100%;
+    padding-bottom: 15%;
+  }
+
+  #step5-body p {
+    font-size: 3vw;
+  }
+
+  #step5-body h2 {
+    font-size: 4vw;
+  }
+  .betalingsoplysninger input[type="text"] {
+    font-size: 3vw;
+  }
+
+  /* STEP 6 */
+
+  #step6-body {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+
+  #step6-body h1 {
+    font-size: 4vw;
+  }
+  #step6-body p {
+    font-size: 3vw;
+  }
+
+  /* PROFILE */
+
+  #profilmenu li {
+    width: 90%;
+  }
+
+  #oplysninger {
+    margin-top: 150px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 3vw;
+  }
+
+  #profilmenu a {
+    font-size: 2.5vw;
+  }
+
+  #retoplysninger a {
+    padding: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 3vw;
+  }
+
+  /* 404 PAGE */
+
+  #tekniskfejl h1 {
+    font-size: 7vw;
+  }
+
+  #tekniskfejl h2 {
+    font-size: 4vw;
+  }
+
+  #tilbagetilforsiden a {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 3.5vw;
+  }
+
+  #panda img {
+    width: 30%;
+  }
+
+  /* PROGRESS BAR */
+  .circle-and-text p {
+    font-size: 1.5vw;
+  }
+  .line {
+    width: 10%;
+  }
+
+  /* opskrift  */
+
+  #mobil-top-tekst {
+    display: block;
+  }
+
+  .opskrift {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .opskrift p {
+    line-height: 15px;
+    font-size: 3.5vw;
+  }
+
+  .box1 {
+    width: 90%; /* ændre til det sammen som på det japanske køkken siden??? */
+  }
+
+  .box1 h2,
+  #mobil-top-tekst h2 {
+    font-size: 5vw;
+    color: #26245e;
+  }
+
+  .box1 h3 {
+    font-size: 3.5vw;
+    color: #26245e;
+  }
+
+  .box2 {
+    width: 70%;
+  }
+
+  .box2 img {
+    margin-top: 20%;
+  }
+
+  #com-top-tekst {
+    display: none;
+  }
+
+  #mobil-top-tekst {
+    width: 90%;
+    margin: auto;
+  }
+
+  #mobil-top-tekst h2 {
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  #ingredients {
+    text-align: center;
+  }
+}
+
+/* BREAKPOINT V. 1600 PX */
+
+@media screen and (max-width: 1600px) {
+  .cards div {
+    width: 300px;
+    height: 450px;
+  }
+  .cards div a {
+    bottom: 30px;
+    left: 75px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* PROFILE */
+
+  #profilmenu li {
+    width: 95%;
+  }
+
+  #oplysninger {
+    margin-top: 150px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 3vw;
+  }
+
+  #profilmenu a {
+    font-size: 3vw;
+  }
+
+  #retoplysninger a {
+    padding: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 3vw;
+  }
+
+  /* JAPAN KITCHEN */
+
+  #billede img {
+    border-radius: 0px;
+    width: 100%;
+    height: auto;
+  }
+
+  #brødtekst {
+    width: 90%;
+  }
+
+  #overskrift h1 {
+    font-size: 7vw;
+  }
+
+  #indledning h2 {
+    font-size: 4vw;
+  }
+
+  #brødtekst p {
+    font-size: 3.5vw;
+    line-height: 15px;
+  }
+
+  #brødtekst h3 {
+    font-size: 4vw;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  /* PROGRESS BAR */
+  #progress-bar {
+    display: none;
+  }
+  #mobile-progress-container {
+    display: flex;
+  }
+
+  .circle-and-text p {
+    font-size: 3vw;
+  }
+
+  /* STEP 1 & STEP 3 (CARDS) */
+
+  .card-container {
+    gap: 30px;
+  }
+
+  /* STEP 4 */
+
+  #knapper-section {
+    width: 70%;
+  }
+  .knap {
+    width: 45%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* CONCEPT PAGE */
+
+  /* All texts and titles */
+  .head-titles {
+    font-size: 5vw;
+    margin-bottom: 20px;
+  }
+
+  #koncept-side-intro-1 {
+    font-size: 4vw;
+  }
+
+  #koncept-side-intro-2 {
+    font-size: 3vw;
+  }
+
+  .koncept-cards {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .koncept-cards-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  .koncept-cards-div h4 {
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: 4vw;
+  }
+  #button-koncept-cards a {
+    margin-left: 5%;
+    font-size: 3.5vw;
+  }
+
+  .koncept-cards-div p {
+    width: 90%;
+    font-size: 3.5vw;
+    margin-left: 5%;
+  }
+  .koncept-cards-div img {
+    border-radius: 0%;
+  }
+
+  .right-aligned {
+    flex-direction: column;
+  }
+  .left-aligned {
+    flex-direction: column-reverse;
+  }
+  .right-aligned-bottom {
+    flex-direction: column-reverse;
+  }
+  .left-aligned-bottom {
+    flex-direction: column;
+  }
+
+  video {
+    width: 100%;
+  }
+  .infographic-1 {
+    width: 100%;
+  }
+
+  .koncept-big-text {
+    margin-top: 50px;
+    font-size: 5vw;
+  }
+
+  .fa-fish,
+  .fa-truck,
+  .fa-box-open,
+  .fa-certificate {
+    margin-top: 10px;
+    font-size: 10.5vw;
+  }
+
+  .koncept-cards-baredygtighed {
+    margin-bottom: 20px;
+  }
+
+  .flex-koncept-baredygtighed div h4 {
+    display: none;
+  }
+
+  .koncept-cards-baredygtighed {
+    width: 90%;
+    align-items: center;
+  }
+  .koncept-baredygtighed-div {
+    margin-left: 5%;
+  }
+  .koncept-baredygtighed-div h2 {
+    font-size: 4vw;
+    margin-top: 10px;
+  }
+  .koncept-baredygtighed-div p {
+    font-size: 3vw;
+  }
+
+  footer {
+    height: 340px;
+  }
+  #socials i {
+    font-size: 5vw;
+  }
+
+  /* ORDER OUTPUT (JavaScript) */
+
+  #customer-information li {
+    font-size: 2.5vw;
+  }
 }

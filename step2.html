@@ -1,128 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js" defer ></script>
-    <title>Nippon - Step 2 </title>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/a05f739ef1.js" crossorigin="anonymous"></script>
-</head>
-<body id=step2-body>
-    
-    <h2 class="step2-overskrift">Antal personer</h2>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <script src="order.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nippon - Bestilling (trin 2)</title>
+    <style>
+      /* PROGRESS BAR */
+      .circle-and-text:nth-child(1) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      .circle-and-text:nth-child(3) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      #progress-bar .line:nth-child(2) {
+        background-color: #26245e;
+      }
+      /* PROGRESS BAR MOBILE */
+      .line-mobile:first-child {
+        background-color: #26245e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
 
-    <section class="dage-sektion">
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
 
-        <div  class="dage-cirkel">
-            <p>1</p>
+    <!-- PROGRESS BAR -->
+
+    <div id="progress-bar">
+      <div class="circle-and-text" id="first-step">
+        <div class="circle">1</div>
+        <p>Vælg kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">2</div>
+        <p>Tilpas kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">3</div>
+        <p>Dine retter</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">4</div>
+        <p>Oplysninger</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">5</div>
+        <p>Betaling</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">6</div>
+        <p>Bekræftelse</p>
+      </div>
+    </div>
+
+    <!-- MOBILE PROGRESS BAR -->
+
+    <div id="mobile-progress-container">
+      <div class="line-mobile"></div>
+      <div id="progress-bar-mobile">
+        <p>Tilpas kasse</p>
+        <div class="circle-mobile">2</div>
+      </div>
+      <div class="line-mobile"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <section id="step2-body">
+      <h2 class="step2-overskrift">Antal personer</h2>
+
+      <section class="dage-sektion">
+        <div class="dage-cirkel people">
+          <p>1</p>
         </div>
 
-        <div class="dage-cirkel"> 
-            <p>2</p>
+        <div class="dage-cirkel people">
+          <p>2</p>
         </div>
 
-        <div  class="dage-cirkel">
-            <p>3</p>
+        <div class="dage-cirkel people">
+          <p>3</p>
         </div>
 
-        <div  class="dage-cirkel">
-            <p>4</p>
+        <div class="dage-cirkel people">
+          <p>4</p>
         </div>
 
-        <div  class="dage-cirkel">
-            <p>5</p>
+        <div class="dage-cirkel people">
+          <p>5</p>
         </div>
 
-        <div class="dage-cirkel">
-            <p>6</p>
+        <div class="dage-cirkel people">
+          <p>6</p>
+        </div>
+      </section>
+
+      <h2 class="step2-overskrift">Antal dage</h2>
+      <p>Bemærk 1 måltid pr. dag</p>
+
+      <section class="dage-sektion">
+        <div class="dage-cirkel days">
+          <p>1</p>
         </div>
 
+        <div class="dage-cirkel days">
+          <p>2</p>
+        </div>
+
+        <div class="dage-cirkel days">
+          <p>3</p>
+        </div>
+
+        <div class="dage-cirkel days">
+          <p>4</p>
+        </div>
+
+        <div class="dage-cirkel days">
+          <p>5</p>
+        </div>
+
+        <div class="dage-cirkel days">
+          <p>6</p>
+        </div>
+
+        <div class="dage-cirkel days">
+          <p>7</p>
+        </div>
+      </section>
+
+      <h2 class="step2-overskrift">Allergier og præferencer</h2>
+      <p>Klik for at vælge/fravælge</p>
+      <section class="allergier">
+        <div>
+          <p>Gluten</p>
+          <div class="check-cirkel"></div>
+        </div>
+
+        <!-- Dette er knappen vi bruger på eksempel på hvordan man ville kunne tjekke af -->
+        <!-- Vi laver dette eks med ID, da samme teori ikke virkede med class på alle div'erne -->
+        <div>
+          <p>Laktose</p>
+          <div id="check-cirkel-forsøg">
+            <!-- Her indsættes ikonet i java script -->
+          </div>
+        </div>
+
+        <div>
+          <p>Nødder</p>
+          <div class="check-cirkel"></div>
+        </div>
+
+        <div>
+          <p>Skaldyr</p>
+          <div class="check-cirkel"></div>
+        </div>
+
+        <div>
+          <p>Vegetar</p>
+          <div class="check-cirkel"></div>
+        </div>
+
+        <div>
+          <p>Veganer</p>
+          <div class="check-cirkel"></div>
+        </div>
+      </section>
+      <br />
+      <br />
     </section>
 
+    <section id="knapper-section">
+      <a href="step1.html" class="knap">
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Tilbage</p>
+      </a>
 
-    <h2 class="step2-overskrift">Antal dage</h2>
-    <p>Bemærk 1 måltid pr. dag</p>
-
-    <section class="dage-sektion">
-
-        <div class="dage-cirkel">
-            <p>1</p>
-        </div>
-
-        <div  class="dage-cirkel"> 
-            <p>2</p>
-        </div>
-
-        <div  class="dage-cirkel">
-            <p>3</p>
-        </div>
-
-        <div  class="dage-cirkel">
-            <p>4</p>
-        </div>
-
-        <div  class="dage-cirkel">
-            <p>5</p>
-        </div>
-
-        <div  class="dage-cirkel">
-            <p>6</p>
-        </div>
-
-        <div  class="dage-cirkel">
-            <p>7</p>
-        </div>
-        
+      <a href="step3.html" class="knap">
+        <p>Videre</p>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </section>
 
-    <h2 class="step2-overskrift">Allergier og præferencer</h2>
-    <p>Klik for at fravælge</p>
-    <section class="allergier">
+    <!-- FOOTER -->
+    <footer>
+      <div id="contact">
+        <h3>Kontakt-Info</h3>
+        <ul>
+          <li>Mail: <a href="mailto:nippon@email.com">kontakt@nippon.dk</a></li>
+          <li>Telefon: <a href="tel:+4540302010">+45 40 30 20 10</a></li>
+        </ul>
+      </div>
+      <div id="address">
+        <h3>Adresse</h3>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
+          Ringvej Syd 104 <br />
+          8260 Viby J
+        </a>
+      </div>
+      <div id="socials">
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
         <div>
-            <p>Gluten</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
         </div>
-
-        <div> 
-            <p>Laktose</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-
-        <div>
-            <p>Nødder</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-
-        <div>
-            <p>Skaldyr</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-
-        <div>
-            <p>Vegetar</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-
-        <div>
-            <p>Veganer</p>
-            <div class="check-cirkel">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-        
-    </section>
-
-</body>
+      </div>
+    </footer>
+  </body>
 </html>

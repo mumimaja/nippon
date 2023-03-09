@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a05f739ef1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <script src="order.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nippon - Bestilling (trin 5)</title>
+    <style>
+      .circle-and-text:nth-child(1) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      .circle-and-text:nth-child(3) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      .circle-and-text:nth-child(5) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      .circle-and-text:nth-child(7) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      .circle-and-text:nth-child(9) .circle {
+        background-color: #26245e;
+        color: white;
+      }
+      #progress-bar .line:nth-child(2) {
+        background-color: #26245e;
+      }
+      #progress-bar .line:nth-child(4) {
+        background-color: #26245e;
+      }
+      #progress-bar .line:nth-child(6) {
+        background-color: #26245e;
+      }
+      #progress-bar .line:nth-child(8) {
+        background-color: #26245e;
+      }
+      /* PROGRESS BAR MOBILE */
+      .line-mobile:first-child {
+        background-color: #26245e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar">
+      <div class="circle-and-text" id="first-step">
+        <div class="circle">1</div>
+        <p>Vælg kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">2</div>
+        <p>Tilpas kasse</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">3</div>
+        <p>Dine retter</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">4</div>
+        <p>Oplysninger</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">5</div>
+        <p>Betaling</p>
+      </div>
+      <div class="line"></div>
+      <div class="circle-and-text">
+        <div class="circle">6</div>
+        <p>Bekræftelse</p>
+      </div>
+    </div>
+
+    <!-- MOBILE PROGRESS BAR -->
+
+    <div id="mobile-progress-container">
+      <div class="line-mobile"></div>
+      <div id="progress-bar-mobile">
+        <p>Betaling</p>
+        <div class="circle-mobile">5</div>
+      </div>
+      <div class="line-mobile"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <section id="step5-body">
+      <section id="step5-flex">
+        <section id="customer-order">
+          <h2>Din bestilling</h2>
+
+          <p><b>Måltidskasse:</b></p>
+          <p><b>Antal personer:</b></p>
+          <p><b>Antal dage:</b></p>
+
+          <br />
+
+          <p><b>Levering til:</b></p>
+        </section>
+
+        <section>
+          <h2>Betaling</h2>
+
+          <div class="betalingsoplysninger">
+            <form><input type="text" placeholder="Visa Dankort" value="" /><br /></form>
+
+            <img src="images/visa.jpg" alt="visa dankort" />
+          </div>
+
+          <div class="betalingsoplysninger">
+            <form><input type="text" placeholder="Mastercard" value="" /><br /></form>
+
+            <img src="images/mastercard.jpg" alt="Mastercard" />
+          </div>
+
+          <div class="betalingsoplysninger">
+            <form><input type="text" placeholder="MobilePay" value="" /><br /></form>
+
+            <img src="images/mobilepay.jpg" alt="Mobilepay" />
+          </div>
+
+          <div class="betalingsoplysninger">
+            <form><input type="text" placeholder="PayPal" value="" /><br /></form>
+
+            <img src="images/paypal.jpg" alt="paypal" />
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <section id="knapper-section">
+      <a href="step4.html" class="knap">
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Tilbage</p>
+      </a>
+
+      <a href="step6.html" class="knap">
+        <p id="last-step">Gennemfør</p>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="contact">
+        <h3>Kontakt-Info</h3>
+        <ul>
+          <li>Mail: <a href="mailto:nippon@email.com">kontakt@nippon.dk</a></li>
+          <li>Telefon: <a href="tel:+4540302010">+45 40 30 20 10</a></li>
+        </ul>
+      </div>
+      <div id="address">
+        <h3>Adresse</h3>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
+          Ringvej Syd 104 <br />
+          8260 Viby J
+        </a>
+      </div>
+      <div id="socials">
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
+        <div>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

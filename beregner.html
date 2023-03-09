@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <!-- Insert META content here! -->
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <script src="weekplanner.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nippon - Forside</title>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main>
+      <div id="calc-container">
+        <div id="calculator">
+          <div id="calc-text">
+            <h1>Måltidskasse beregner</h1>
+            <p>
+              Er du i tvivl om hvor langt dine penge rækker? Prøv vores måltidskasse beregner og for at
+              forslag til en måltidskasse
+            </p>
+          </div>
+          <form id="calc-form">
+            <label for="userBudget">Dit ugentlige budget:</label>
+            <input type="number" name="input" id="userBudget" placeholder="Eks. 350 kr." />
+            <input type="submit" value="Generer ugeplan" id="submit-calc" />
+          </form>
+          <p id="output"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -3,40 +3,56 @@
   <head>
     <!-- Insert META content here! -->
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Nippon - Forside</title>
+    <title>Nippon - Japanske måltidskasser</title>
   </head>
   <body>
+    <!-- Mobile menu -->
+    <div class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
     <!-- Page header -->
     <header>
       <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
       <nav>
         <div class="dropdown">
-          <a href="#" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
           <div class="dropdown-content">
-            <a href="Vælg-kasse.html">Vælg måltidskasse</a>
-            <a href="#">Måltidskasse beregner</a>
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
           </div>
         </div>
-        <a href="#">Konceptet</a>
-        <a href="#">Det japanske køkken</a>
-        <a href="#">Webshop</a>
-        <a href="#" id="user"><i class="fa-solid fa-user"></i></a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
       </nav>
     </header>
     <!-- Hero image -->
     <div id="hero">
       <h1>Japansk Inspirerede Måltidskasser</h1>
-      <a href="#">Bestil din måltidskasse her</a>
+      <a href="step1.html">Bestil din måltidskasse her</a>
     </div>
 
     <!-- Main content -->
     <main>
-      <img id="infographic" src="images/SVG/infographic-frontpage.svg" alt="infographic" />
+      <a href="concept.html"><img id="infographic" src="images/Infographic.png" alt="infographic" /></a>
       <div id="teaser">
         <div>
           <img src="images/dishfrontpage.png" alt="måltid" />
@@ -48,7 +64,7 @@
               Du kender sikkert til sushi, som uden tvivl er Japans meste kendte ret. Men det japanske køkken
               kan endnu mere end det.
             </p>
-            <a href="#">Læs mere her</a>
+            <a href="japankitchen.html">Læs mere her</a>
           </div>
         </div>
       </div>
@@ -65,16 +81,16 @@
       </div>
       <div id="address">
         <h3>Adresse</h3>
-        <p>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
           Ringvej Syd 104 <br />
           8260 Viby J
-        </p>
+        </a>
       </div>
       <div id="socials">
-        <h3><a href="#">Leveringsvilkår</a></h3>
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
         <div>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </footer>

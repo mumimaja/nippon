@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fcedd7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/SVG/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Koncept</title>
+  </head>
+  <body>
+    <!-- Mobile menu -->
+    <div id="myNav" class="menu">
+      <i class="fa-solid fa-x closebtn"></i>
+
+      <div class="menu-content">
+        <a href="step1.html">Vælg måltidskasse</a>
+        <a href="beregner.html">Måltidskasseberegner</a>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html">Profil</a>
+      </div>
+    </div>
+    <!-- Page header -->
+    <header>
+      <a href="index.html"><img src="images/SVG/logo.svg" alt="logo" id="logo" /></a>
+      <i class="fa-solid fa-bars"></i>
+      <nav>
+        <div class="dropdown">
+          <a href="step1.html" class="dropdown-btn">Måltidskasser <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <a href="step1.html">Vælg måltidskasse</a>
+            <a href="beregner.html">Måltidskasse beregner</a>
+          </div>
+        </div>
+        <a href="concept.html">Konceptet</a>
+        <a href="japankitchen.html">Det japanske køkken</a>
+        <a href="404.html">Webshop</a>
+        <a href="profile.html" id="user"><i class="fa-solid fa-user"></i></a>
+      </nav>
+    </header>
+    <main>
+      <section id="concept-container">
+        <!-- Head-title -->
+        <h1 class="head-titles">Sådan fungerer Nippon</h1>
+
+        <!-- Animatic picture is here -->
+        <img class="infographic-1" src="images/infographic.png" alt="animatic-threesteps" />
+
+        <!-- Text -->
+        <h3 id="koncept-side-intro-1">Stadig i tvivl om hvordan det virker?</h3>
+
+        <h4 id="koncept-side-intro-2">Vi har lavet en video som viser processen. Se den nedenfor.</h4>
+
+        <!-- Font Awesome arrow -->
+        <i class="fa-solid fa-arrow-down"></i>
+
+        <!-- Video / Animatic -->
+        <video controls>
+          <source src="nippon-animatic.mp4" type="video/mp4" />
+        </video>
+
+        <!-- The 3 first cards -->
+        <section class="koncept-cards left-aligned">
+          <div class="koncept-cards-div">
+            <h4>Bestilling af din ordre</h4>
+            <p>
+              Bestil dine favoritretter eller prøv noget helt nyt! <br /><br />
+              Når du har bestilt går vi i gang med at samle dine varer.
+            </p>
+            <div id="button-koncept-cards">
+              <a href="step1.html">Bestil måltidskasse</a>
+            </div>
+          </div>
+
+          <div class="koncept-cards-div">
+            <img src="images/payment.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="koncept-cards right-aligned">
+          <div class="koncept-cards-div">
+            <img src="images/fridge.jpg" alt="" />
+          </div>
+
+          <div class="koncept-cards-div">
+            <h4>Vi handler for dig</h4>
+            <p>
+              Slip for lange køer og udsolgte varer. Vi klarer indkøbet for dig!<br /><br />
+              Vi pakker maden i individuelle poser. Det eneste du skal gøre, <br /><br />
+              er at huske at lægge kølevarerne på køl.
+            </p>
+          </div>
+        </section>
+
+        <section class="koncept-cards left-aligned">
+          <div class="koncept-cards-div">
+            <h4>Bestilling af din ordre</h4>
+            <p>
+              Bestil dine favoritretter eller prøv noget helt nyt! <br /><br />
+              Når du har bestilt, går vi i gang med at samle dine varer.
+            </p>
+          </div>
+
+          <div class="koncept-cards-div">
+            <img src="images/cooking.jpg" alt="" />
+          </div>
+        </section>
+        <!-- The 3 first cards -->
+
+        <h1 class="koncept-big-text">Bæredygtighed</h1>
+
+        <!-- The section looking like an infographic -->
+        <section class="flex-koncept-baredygtighed">
+          <div>
+            <i class="fa-solid fa-fish"></i>
+            <h4>Fisk</h4>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-truck"></i>
+            <h4>Fragt</h4>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-box-open"></i>
+            <h4>Emballage</h4>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-certificate"></i>
+            <h4>Certifikater</h4>
+          </div>
+        </section>
+
+        <!-- The 3 last cards -->
+        <section class="koncept-cards right-aligned-bottom">
+          <div class="koncept-cards-div">
+            <h4>Madvarer</h4>
+            <p>
+              Madvarerne er altid nøje udplukket fra troværdige leverandører. <br /><br />
+              Vi fokuserer på at købe lokalt frugt og grønt, og du kan være sikker på at der altid kommer
+              dansk svine-, okse- og kyllingekød i din måltidskasse.
+              <br /><br />
+              Fiskene vil være MSC certificeret.
+            </p>
+          </div>
+
+          <div class="koncept-cards-div">
+            <img src="images/vegetables.jpg" alt="" />
+          </div>
+        </section>
+
+        <section class="koncept-cards left-aligned-bottom">
+          <div class="koncept-cards-div">
+            <img src="images/delivery-man.jpg" alt="" />
+          </div>
+
+          <div class="koncept-cards-div">
+            <h4>Fragt</h4>
+            <p>
+              Husk at være hjemme den dag din kasse bliver leveret. <br /><br />
+              Vores fragtmænd placerer kassen foran din dør, eller det ønskede sted mellem 12.00 og 16.00.
+            </p>
+          </div>
+        </section>
+
+        <section class="koncept-cards right-aligned-bottom">
+          <div class="koncept-cards-div">
+            <h4>Emballage</h4>
+            <p>
+              BVi forsøger hele tiden at gøre vores emballage mere bæredygtig, for at mindske
+              miljøbelastningen og ressourcespild. <br /><br />
+              Vores indpakning pt. Består af pap med et tyndt folielag som forebygger udslip fra indholdet.
+              <br /><br />
+              Indpakningen på varerne i din måltidskasse vil altid være markeret med den korrekte
+              affaldssorteringslæsning. Det gør det nemt for dig.
+            </p>
+          </div>
+
+          <div class="koncept-cards-div">
+            <img src="images/closing-box.jpg" alt="" />
+          </div>
+        </section>
+        <!-- The 3 last cards -->
+
+        <h1 class="koncept-big-text">Certifikater</h1>
+
+        <!-- MSC -->
+        <section class="koncept-cards-baredygtighed">
+          <div class="koncept-baredygtighed-div">
+            <h2>MSC-Certifikat</h2>
+            <p>
+              MSC mærket gives fiskerier som lever op til diverse regler inden for vildt bæredygtigt fiskeri.
+              Bl.a. Fiskekvoter og fangstmetoder <br /><br />
+              Det betyder at du kan spise fisk med god samvittighed og respekt for havet.
+            </p>
+          </div>
+
+          <div>
+            <img src="images/msc.jpeg" alt="" />
+          </div>
+        </section>
+
+        <!-- ASC -->
+        <section class="koncept-cards-baredygtighed">
+          <div class="koncept-baredygtighed-div">
+            <h2>ASC-Certifikat</h2>
+            <p>
+              ASC er en nonprofit organisation i samarbejde med WWF. ASC ønsker at sikre forbrugerne et
+              miljøvenligt og socialt ansvarligt valg af opdrættede fiskeprodukter. <br /><br />
+              Dette opnås bl.a. ved streng kontrol af forsyningskæden.
+            </p>
+          </div>
+
+          <div>
+            <img src="images/asc.JPG" alt="" />
+          </div>
+        </section>
+
+        <!-- GLOBAL G.A.P -->
+        <section class="koncept-cards-baredygtighed">
+          <div class="koncept-baredygtighed-div">
+            <h2>GLOBAL G.A.P Certifikat</h2>
+            <p>
+              GLOBAL G.A.P er en international organisation som arbejder for gode standarder globalt.
+              <br /><br />
+              Dette indebærer alt fra planter og jordbrug til dyr i landbruget.
+            </p>
+          </div>
+
+          <div>
+            <img src="images/gap.jpg" alt="" />
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="contact">
+        <h3>Kontakt-Info</h3>
+        <ul>
+          <li>Mail: <a href="mailto:nippon@email.com">kontakt@nippon.dk</a></li>
+          <li>Telefon: <a href="tel:+4540302010">+45 40 30 20 10</a></li>
+        </ul>
+      </div>
+      <div id="address">
+        <h3>Adresse</h3>
+        <a href="https://goo.gl/maps/88NpiELkdUA62zVVA" target="_blank">
+          Ringvej Syd 104 <br />
+          8260 Viby J
+        </a>
+      </div>
+      <div id="socials">
+        <h3><a href="404.html">Leveringsvilkår</a></h3>
+        <div>
+          <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
